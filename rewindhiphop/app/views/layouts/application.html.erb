@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rewindhiphop</title>
+    <title>RW</title>
+    <nav>
+    	<ul>
+		  <li><%= link_to "Home",home_path%></li>
+		  <li><%= link_to "Tapes",tapes_path%></li>
+		  <li><%= link_to "User",user_path%></li>
+		  <%= render 'devise/menu/registration_items' %>
+  		  <%= render 'devise/menu/login_items' %>
+		</ul>
+    <nav/>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
