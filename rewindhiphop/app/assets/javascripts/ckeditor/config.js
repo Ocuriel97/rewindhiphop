@@ -6,6 +6,7 @@ CKEDITOR.editorConfig = function(config) {
   config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
   config.filebrowserImageUploadUrl = "/ckeditor/pictures";
   config.filebrowserUploadUrl = "/ckeditor/attachment_files";
+  config.extraPlugins = 'youtube';
 
   config.toolbar_Pure = [
     '/', {
@@ -30,5 +31,4 @@ CKEDITOR.editorConfig = function(config) {
   ];
   config.toolbar = 'Pure';
   return true;
-  config.extraPlugins = 'youtube';
 };

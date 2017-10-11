@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   	
-  get 'home', to: 'static_pages#home', as: 'home'
+  get 'home', to: 'posts#index', as: 'home'
 
   get 'tapes', to: 'static_pages#tapes', as: 'tapes'
 
