@@ -59,3 +59,5 @@ gem 'simple_form', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.3'
 # Creation and updating of a post
 gem 'ckeditor', '~> 4.1'
+# Comment closure
+gem 'closure_tree'

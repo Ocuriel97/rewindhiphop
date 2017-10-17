@@ -41,6 +41,9 @@ class PostsController < ApplicationController
 
   # The show action renders the individual post after retrieving the the id
   def show
+    @user = current_user
+    @post = Post.find(params[:id])
+    @comments = @post.comments
   end
 
   # The destroy action removes the post permanently from the database
