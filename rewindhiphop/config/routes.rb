@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  mount Ckeditor::Engine => '/ckeditor'
   resources :posts do
   	resources :comments
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
   	
   get 'home', to: 'posts#index', as: 'home'
 
