@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
 	 before_action :find_post, only: [:edit, :update, :show, :delete]
+   before_action :authenticate_user!
+   before_action :only => [:new, :edit] do 
+    redirect_to new_user_session_path unless current_user && current_user.admin
+   end
 
   # Index action to render all posts
   def index
@@ -65,4 +69,5 @@ class PostsController < ApplicationController
   def find_post
     @post = Post.find(params[:id])
   end
+
 end

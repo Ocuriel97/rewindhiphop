@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-ul {
+ul .nav navbar-nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,7 +25,8 @@ li {
     float: left;
 }
 
-li a {
+.navbar-inverse .navbar-nav li a{
+    line-height: 60px;
     display: block;
     color: white;
     text-align: center;
@@ -37,10 +38,9 @@ li a:hover {
     background-color: #111;
 }
 
-.replies {margin-left: 50px;}
-
-/* 5 levels nesting */
-.replies .replies .replies .replies .replies {margin-left: 0;}
+.content{
+    padding:20px;
+}
 
 
 
