@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rewindhiphop</title>
+    <title>Rewind Hiphop</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'rewind-logo-icon.png' %>
   </head>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <body>
-    <%= yield %>
+    <header class="navbar navbar-inverse">
+      <div class= "navbar-class">
+        <div class= "container">
+        	<ul class= "nav navbar-nav">
+            <li class= "nav-logo"><%= link_to image_tag("rewind-logo.png", alt: "logo"), home_path, class: "navbar-left"%></li>
+      		  <li class="nav-links"><%= link_to "Home",home_path%></li>
+      		  <li class="nav-links"><%= link_to "Tapes",tapes_path%></li>
+      		  <li class="nav-links"><%= link_to "User",user_path%></li>
+      		  <%= render 'devise/menu/registration_items' %>
+        		<%= render 'devise/menu/login_items' %>
+    		  </ul>
+        </div>
+      </div>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
