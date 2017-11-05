@@ -25,6 +25,10 @@ li {
     float: left;
 }
 
+li.nav-logo{
+    margin-top:15px;
+}
+
 .navbar-inverse .navbar-nav li a{
     line-height: 60px;
     display: block;
@@ -41,6 +45,23 @@ li a:hover {
 .content{
     padding:20px;
 }
+
+button.navbar-toggle{
+    margin-top:15px;
+}
+
+@media only screen 
+    and (min-device-width : 414px) 
+    and (max-device-width : 736px)
+    and (device-width : 414px)
+    and (device-height : 736px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 3) 
+    and (-webkit-device-pixel-ratio : 3)
+{ li.nav-logo{
+    margin-top:0px;
+}}
+
 
 
 

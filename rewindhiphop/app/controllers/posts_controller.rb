@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   # Create action saves the post into database
   def create
     @post = Post.new(post_params)
-    @post.user = current_user
+    @post.user_id = current_user
     if @post.save(post_params)
       flash[:notice] = "Successfully created post!"
       redirect_to post_path(@post)
