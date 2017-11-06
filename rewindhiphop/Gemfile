@@ -61,3 +61,5 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'ckeditor', '~> 4.1'
 # Comment closure
 gem 'closure_tree'
+# MySql for Heroku 
+gem 'mysql2'
